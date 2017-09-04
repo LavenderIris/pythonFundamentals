@@ -14,15 +14,15 @@ def firstAndlast(list):
   print("first and last of array: "+ list[0] + " "+ list[-1])
   
 def newList(list):
-  list=sorted(list)
-  count=len(list)/2
-  temp=list[:count]
-  
-  for i in range(count-1):
-    list.pop(0)
-  list[0]=temp
-  print(list)
-  return list
+  list.sort()
+  half=len(list)/2
+  temp=list[:half]
+  second_list=list[half:]
+  print(temp)
+  print(second_list)
+  second_list.insert(0, temp)
+  print(second_list)
+
 
 w = "It's thanksgiving day. It's my birthday,too!"
 findAndReplace(w)
